@@ -27,6 +27,7 @@
     background-color: #6b0f1a;
     background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
     color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
 
 .title-input {
@@ -61,11 +62,6 @@
     transition: 2s;
 }
 
-.textbox:hover{
-    background-color: #a4c2e2;
-    transition: 1s;
-}
-
 .button {
     display: flex;
     flex-wrap: wrap;
@@ -75,6 +71,15 @@
     border-radius: 5px;
     padding: 10px;
     margin: 5px auto;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: ease 1s;
+    font-weight: 300;
+}
+
+.button:hover {
+    transition: ease 1s;
+    letter-spacing: 2.5px;
 }
 
 .qr-img {
@@ -83,4 +88,5 @@
     justify-content: center;
     text-align: center;
     align-items: center;
+    margin: 10px auto;
 }
