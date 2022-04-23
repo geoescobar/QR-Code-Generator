@@ -17,7 +17,6 @@ function loadCode() {
   if(url.length > 0 && url.match(urlReader)){
     let imgSrc = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${url}`;
     qrImg.src = imgSrc;
-    title.style.display = "none";
   } else {
     alert('Please enter valid URL');
     return loadCode;
