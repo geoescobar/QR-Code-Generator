@@ -12,9 +12,9 @@ button.addEventListener("submit", function (event) {
 });
 
 function loadCode() {
-  let data = input.value.trim();
+  let url = input.value.trim();
   if(data.length > 0 && data.match(urlReader)){
-    let imgSrc = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${data}`;
+    let imgSrc = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${url}`;
     qrImg.src = imgSrc;
     title.style.display = "none";
   } else {
