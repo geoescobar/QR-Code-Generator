@@ -2,19 +2,18 @@ const input = document.querySelector(".form input");
 const button = document.querySelector(".form button");
 const qrImg = document.querySelector(".qr-img img");
 const title = document.querySelector("title");
-
-const urlR = /(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/
-
+const urlReader = /(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/
 
 
-button.addEventListener("click", function (event) {
+
+button.addEventListener("submit", function (event) {
   event.preventDefault();
   loadCode();
 });
 
 function loadCode() {
   let data = input.value.trim();
-  if(data.length > 0 && data.match(urlR)){
+  if(data.length > 0 && data.match(urlReader)){
     let imgSrc = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${data}`;
     qrImg.src = imgSrc;
     title.style.display = "none";
