@@ -29,6 +29,16 @@ body {
   color: white;
 }
 
+@media only screen and (max-width: 390px) {
+  /* For mobile phones: */
+  .container {
+    margin: 15vh auto;
+    width: 100vw;
+    padding: 75px;
+  }
+
+}
+
 .title-input {
   display: flex;
   flex-wrap: wrap;
