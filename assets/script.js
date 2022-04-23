@@ -2,11 +2,12 @@ const input = document.querySelector(".form input");
 const button = document.querySelector(".form button");
 const qrImg = document.querySelector(".qr-img img");
 const title = document.querySelector("title");
+// url regex code to read urls
 const urlReader = /(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/
 
 
 
-button.addEventListener("submit", function (event) {
+button.addEventListener("click", function (event) {
   event.preventDefault();
   loadCode();
 });
