@@ -14,7 +14,7 @@ button.addEventListener("click", function (event) {
 
 function loadCode() {
   let url = input.value.trim();
-  if(data.length > 0 && data.match(urlReader)){
+  if(url.length > 0 && url.match(urlReader)){
     let imgSrc = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${url}`;
     qrImg.src = imgSrc;
     title.style.display = "none";
